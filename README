@@ -1,4 +1,4 @@
-Create a new Titanium mobile project and replace the entire "Resources" directory with this one.
+Create a new Titanium (http://www.appcelerator.com/) mobile project and replace the entire "Resources" directory with this one.
 
 Edit globals.js to customise app.
 
