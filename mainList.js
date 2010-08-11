@@ -18,12 +18,24 @@ for (var i = 0; i < myData.length; i++)
 {
 	// get first letter of each item for grouping
 	firstLetter = myData[i].title.substr(0,1);
-	if(firstLetter != oldFirstLetter){
+	
+	if(i == 0){
 	    oldFirstLetter = firstLetter;
+	    Ti.API.info(oldFirstLetter);
 	} else {
-	    oldFirstLetter = null;
-	}
+	
+	    if(firstLetter == oldFirstLetter){
+    	    oldFirstLetter = null;
+    	} else {
+    	    oldFirstLetter = firstLetter;
+    	}
+	
+    }
+	
+
 	data.push({title:myData[i].title,hasChild:true,header:oldFirstLetter});
+	
+	oldFirstLetter = firstLetter;
 }
 
 // add search bar
